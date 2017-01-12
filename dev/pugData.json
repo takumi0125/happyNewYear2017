@@ -1,0 +1,18 @@
+{
+  "siteUrl": "https://2017.tkmh.me/",
+  "siteTitle": "Happy New Year 2017! by Takumi Hasegawa",
+  "titleSeparater": " | ",
+  "keywords": "2017, new year, WebGL, WebVR, three.js, GLSL, GPGPU, Takumi Hasegawa",
+  "description": "Happy New Year 2017! I wish you all the best for this year!",
+  "useTitleAsOgTitle": true,
+  "useDescriptionAsOgDescription": true,
+  "ogTitle": "Happy New Year 2017 by Takumi Hasegawa",
+  "ogDescription": "Happy New Year 2017! I wish you all the best for this year!",
+  "ogImage": "https://2017.tkmh.me/assets/img/ogp.png",
+  "ogType": "website",
+  "twitterCardType": "summary_large_image",
+  "appleTouchIcon": "/apple-touch-icon.png",
+  "favicon": "/favicon.ico",
+  "showOGP": true,
+  "showTwitterCard": true
+}

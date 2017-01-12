@@ -1,0 +1,336 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  letter-spacing: 0.1em;
+}
+
+h1 {
+  position: absolute;
+  z-index: 0;
+}
+
+#wrapper, #main, #contents, #indicator, #loading {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#loading {
+  -webkit-transition: visibility 0.4s linear, opacity 0.4s linear;
+  transition: visibility 0.4s linear, opacity 0.4s linear;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+#loading .inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: georgia, 'Sawarabi Mincho', serif;
+}
+
+#loading .notice {
+  line-height: 1.4;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#loading .txt {
+  font-size: 20px;
+  -webkit-animation: loadingTxtAnim 0.6s linear alternate infinite;
+          animation: loadingTxtAnim 0.6s linear alternate infinite;
+}
+
+@-webkit-keyframes loadingTxtAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes loadingTxtAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#loading .img {
+  margin: auto;
+  margin-bottom: 20px;
+  background: url("../img/orientation.png") no-repeat center center;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+}
+
+#loading.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media screen and (orientation: landscape) {
+  #loading .img {
+    background: url("../img/loading.gif") no-repeat center center;
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+  }
+  #loading .notice {
+    display: none;
+  }
+}
+
+#indicator {
+  -webkit-transition: visibility 0.4s linear, opacity 0.4s linear;
+  transition: visibility 0.4s linear, opacity 0.4s linear;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#indicator.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#indicator div {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  font-family: georgia, 'Sawarabi Mincho', serif;
+  width: 100%;
+  text-align: center;
+}
+
+#indicator .txt {
+  white-space: nowrap;
+  font-size: 18px;
+}
+
+#indicator .circle {
+  font-size: 28px;
+  letter-spacing: normal;
+  line-height: 80px;
+  width: 80px;
+  height: 80px;
+  text-indent: 0.2em;
+  position: relative;
+  margin: 0 auto 10px;
+}
+
+#indicator .circle:before, #indicator .circle:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 3px solid #fff;
+  content: '';
+  width: 100%;
+  height: 100%;
+}
+
+#indicator .circle:before {
+  -webkit-animation: indicatorCircleAnim1 2s linear infinite;
+          animation: indicatorCircleAnim1 2s linear infinite;
+}
+
+#indicator .circle:after {
+  -webkit-animation: indicatorCircleAnim2 2s linear infinite;
+          animation: indicatorCircleAnim2 2s linear infinite;
+}
+
+@-webkit-keyframes indicatorCircleAnim1 {
+  0% {
+    -webkit-transform: rotateZ(0deg) rotateX(0deg);
+            transform: rotateZ(0deg) rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg) rotateX(360deg);
+            transform: rotateZ(360deg) rotateX(360deg);
+  }
+}
+
+@keyframes indicatorCircleAnim1 {
+  0% {
+    -webkit-transform: rotateZ(0deg) rotateX(0deg);
+            transform: rotateZ(0deg) rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg) rotateX(360deg);
+            transform: rotateZ(360deg) rotateX(360deg);
+  }
+}
+
+@-webkit-keyframes indicatorCircleAnim2 {
+  0% {
+    -webkit-transform: rotateY(0deg) rotateX(0deg);
+            transform: rotateY(0deg) rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(-360deg) rotateX(-360deg);
+            transform: rotateY(-360deg) rotateX(-360deg);
+  }
+}
+
+@keyframes indicatorCircleAnim2 {
+  0% {
+    -webkit-transform: rotateY(0deg) rotateX(0deg);
+            transform: rotateY(0deg) rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(-360deg) rotateX(-360deg);
+            transform: rotateY(-360deg) rotateX(-360deg);
+  }
+}
+
+.logo {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  width: 81px;
+  height: 20px;
+  z-index: 99;
+}
+
+.vr .logo {
+  display: none;
+}
+
+.logo a {
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 0.1;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.logo .mark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 20px;
+}
+
+.logo .mark svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  fill: #fff;
+  -webkit-filter: brightness(0) !important;
+          filter: brightness(0) !important;
+}
+
+.logo .txt {
+  position: absolute;
+  top: 0;
+  left: 21px;
+  width: 61px;
+  height: 20px;
+}
+
+.logo .txt svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: #fff;
+  -webkit-filter: brightness(0) !important;
+          filter: brightness(0) !important;
+}
+
+.webvr-button {
+  -webkit-filter: brightness(0) !important;
+          filter: brightness(0) !important;
+}
+
+#svgDef {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -100;
+  width: 1px;
+  height: 1px;
+}
